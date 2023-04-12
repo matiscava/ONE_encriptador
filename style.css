@@ -244,6 +244,20 @@ footer{
   color: var(--light-blue-400);
   width: fit-content;
   margin-right: .5rem;
+  transition: .5s;
+}
+
+.footer-container svg {
+  transition: .5s;
+}
+
+
+
+.footer-container a:hover{
+  color: #fff;
+}
+.footer-container a:hover svg {
+  fill: #fff;
 }
 .footer-container a:first-of-type {
   margin-left: 0.2rem;
