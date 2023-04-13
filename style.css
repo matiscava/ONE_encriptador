@@ -102,6 +102,19 @@ textarea:focus-within{
   outline: none;
 }
 
+span#error-span{
+  width: 100%;
+  margin-top: -0.8rem;
+  font-size: .8rem;
+  background: red;
+  color: #fff;
+  transition: all .3s ease;
+  white-space: break-spaces;
+  padding: 0 1rem;
+  border-end-end-radius: 1rem;
+  border-end-start-radius: 1rem;
+}
+
 section{
   display: flex;
   flex-direction: column;

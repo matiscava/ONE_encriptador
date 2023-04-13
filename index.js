@@ -5,7 +5,8 @@
 const $btnEncriptado = document.getElementById('btn-encriptar'),
   $btnDesncriptado = document.getElementById('btn-desencriptar'),
   $btnCopiar = document.getElementById('btn-copiar'),
-  $textArea = document.getElementById('texto')
+  $textArea = document.getElementById('texto'),
+  $span = document.getElementById('error-span'),
   $asideDivs = document.querySelectorAll('aside div');
   
 const codigo = { 
@@ -77,13 +78,19 @@ $textArea.value = '';
     if(texto.match(mayusculas) ) {
       // alert("El texto tiene mayuscula, solo acepta minusculas. Modifique su texto");
       $textArea.classList.add('error');
+      $span.innerHTML = "El texto tiene mayuscula, solo acepta minusculas. Modifique su texto";
+      $span.classList.remove('none');
       setTimeout(() => $textArea.classList.remove('error') ,300);
+      setTimeout(() => $span.classList.add('none') ,2000);
       return true;
     }
     if(texto.match(caracteresEspeciales)){
       // alert("El texto tiene carácteres especiales. Modifique su texto")
       $textArea.classList.add('error');
+      $span.innerHTML = "El texto tiene carácteres especiales. Modifique su texto";
+      $span.classList.remove('none');
       setTimeout(() => $textArea.classList.remove('error') ,300);
+      setTimeout(() => $span.classList.add('none') ,2000);
       return true;
     }
     return false;
