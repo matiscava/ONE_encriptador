@@ -212,10 +212,14 @@ aside{
   flex-direction: column;
   height: 100%;
   overflow-y: auto;
+  max-height: 75vh;
+}
+.text-container{
+  flex-grow: 1;
+  overflow-y: inherit
 }
 
 .encriptado p {
-  flex-grow: 1;
   font-weight: 400;
   font-size: 1rem;
   line-height: 150%;
